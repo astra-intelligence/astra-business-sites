@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: astrawatch-landing
+    runtime: node
+    repo: https://github.com/astra-intelligence/astra-business-sites
+    branch: main
+    rootDir: astrawatch-server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
