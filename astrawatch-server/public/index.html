@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstraWatch — AI-Powered Regulatory Monitoring</title>
+  <meta name="description" content="AstraWatch is an autonomous AI agent that monitors regulatory changes relevant to small professional services firms and delivers actionable alerts via Slack — no dashboard, no setup, no ongoing maintenance.">
+  <meta property="og:title" content="AstraWatch — AI-Powered Regulatory Monitoring">
+  <meta property="og:description" content="Autonomous AI that monitors regulatory changes for small professional services firms. Slack-native alerts on SEC, FTC, IRS, and state-level changes that matter to you.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://astrawatch.astraintelligence.co/">
+  <meta property="og:url" content="https://astrawatch.astraintelligence.co/">
+  <meta property="og:image" content="https://astrawatch.astraintelligence.co/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AstraWatch — AI-Powered Regulatory Monitoring">
+  <meta name="twitter:description" content="Autonomous AI that monitors regulatory changes for small professional services firms. Slack-native alerts on SEC, FTC, IRS, and state-level changes.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AstraWatch",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Autonomous AI agent that monitors regulatory changes relevant to small professional services firms and delivers actionable alerts via Slack.",
+    "url": "https://astrawatch.astraintelligence.co",
+    "offers": {
+      "@type": "Offer",
+      "price": "750",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2027-12-31"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AstraWatch",
+    "url": "https://astrawatch.astraintelligence.co",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Astra Intelligence Corporation",
+      "url": "https://astraintelligence.co"
+    }
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #020617; color: #e2e8f0; line-height: 1.6; }
+    .bg-pattern { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(56,189,248,0.05) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; z-index: 0; }
+    .bg-glow { position: fixed; top: -20%; left: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+    .bg-glow-2 { position: fixed; bottom: -20%; right: -10%; width: 50%; height: 50%; background: radial-gradient(circle, rgba(99,102,241,0.05) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+    .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Navigation */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #e2e8f0; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo span { color: #38bdf8; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #e2e8f0; }
+    .nav-cta { background: #38bdf8; color: #fff !important; padding: 0.5rem 1.25rem; border-radius: 8px; }
+    .nav-cta:hover { background: #0ea5e9 !important; }
+
+    /* Hero */
+    .hero { padding: 6rem 0 4rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.2); color: #38bdf8; font-size: 0.8rem; font-weight: 600; padding: 0.35rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.3px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; background: linear-gradient(135deg, #e2e8f0, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.15; }
+    .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 620px; margin: 0 auto 2.5rem; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #38bdf8; color: #fff; padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.2s; box-shadow: 0 4px 20px rgba(14,165,233,0.3); }
+    .btn-primary:hover { background: #0ea5e9; transform: translateY(-2px); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #e2e8f0; padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: all 0.2s; cursor: pointer; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
+
+    /* Sections */
+    .section { padding: 4rem 0; }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .section-header p { color: #94a3b8; font-size: 1.05rem; max-width: 500px; margin: 0 auto; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .feature-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; transition: all 0.2s; }
+    .feature-card:hover { border-color: rgba(56,189,248,0.2); background: rgba(56,189,248,0.02); }
+    .feature-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(56,189,248,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
+    .feature-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .feature-card p { color: #94a3b8; font-size: 0.9rem; }
+
+    /* Stats Bar */
+    .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); margin: 2rem 0; text-align: center; }
+    .stat-item h3 { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 600; background: linear-gradient(135deg, #e2e8f0, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-item p { color: #64748b; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: 0.25rem; }
+
+    /* How It Works */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; counter-reset: step; }
+    .step-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; text-align: center; position: relative; }
+    .step-number { width: 48px; height: 48px; border-radius: 50%; background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; margin: 0 auto 1rem; }
+    .step-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .step-card p { color: #94a3b8; font-size: 0.9rem; }
+
+    /* Waitlist Form */
+    .waitlist-section { padding: 5rem 0; }
+    .waitlist-card { background: linear-gradient(135deg, rgba(56,189,248,0.05), rgba(99,102,241,0.05)); border: 1px solid rgba(56,189,248,0.15); border-radius: 20px; padding: 3rem; max-width: 640px; margin: 0 auto; text-align: center; }
+    .waitlist-card h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .waitlist-card p { color: #94a3b8; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1rem; text-align: left; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.4rem; }
+    .form-group input, .form-group select { width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #e2e8f0; font-size: 0.95rem; font-family: 'Plus Jakarta Sans', sans-serif; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: #38bdf8; }
+    .form-group select option { background: #020617; color: #e2e8f0; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .btn-submit { width: 100%; background: #38bdf8; color: #fff; border: none; padding: 0.85rem; border-radius: 10px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 20px rgba(14,165,233,0.3); }
+    .btn-submit:hover { background: #0ea5e9; transform: translateY(-2px); }
+    .form-note { margin-top: 1rem; font-size: 0.8rem; color: #64748b; }
+
+    /* Sources */
+    .sources-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 2rem 0; }
+    .source-tag { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); padding: 0.5rem 1rem; border-radius: 100px; color: #94a3b8; font-size: 0.85rem; font-weight: 500; }
+    .source-tag.active { border-color: rgba(56,189,248,0.2); color: #38bdf8; }
+
+    /* Footer */
+    footer { padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
+    footer p { color: #64748b; font-size: 0.85rem; }
+    footer a { color: #94a3b8; text-decoration: none; }
+    footer a:hover { color: #e2e8f0; }
+
+    /* Success state */
+    .form-success { display: none; }
+    .form-success.show { display: block; }
+    .form-content.hide { display: none; }
+    .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .success-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .success-text { color: #94a3b8; font-size: 0.95rem; }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.25rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .waitlist-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+  <!-- Plausible Analytics (privacy-first, no cookie banner) -->
+  <script defer src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <div class="container">
+    <!-- Navigation -->
+    <nav>
+      <a href="/" class="logo">🔍 <span>Astra</span>Watch</a>
+      <div class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-badge">🚀 Now in Early Access</div>
+      <h1>Never miss a<br>regulatory change again</h1>
+      <p>An autonomous AI agent that monitors SEC, FTC, IRS, and state-level regulatory changes relevant to your firm. Delivers actionable alerts directly to Slack — no dashboards, no logins, no setup.</p>
+      <div class="hero-btns">
+        <a href="#waitlist" class="btn-primary">Join the Waitlist →</a>
+        <a href="#how-it-works" class="btn-secondary">How It Works</a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <h3>13+</h3>
+        <p>Hours/week saved per firm</p>
+      </div>
+      <div class="stat-item">
+        <h3>50+</h3>
+        <p>Regulatory sources monitored</p>
+      </div>
+      <div class="stat-item">
+        <h3>78%</h3>
+        <p>Compliance teams with ≤5 staff</p>
+      </div>
+      <div class="stat-item">
+        <h3>47%</h3>
+        <p>Firms spending too much on compliance</p>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Zero setup. Connect Slack. Start receiving regulatory alerts in minutes.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Connect Slack</h3>
+          <p>Authorize AstraWatch to send alerts to your team's Slack workspace. No dashboards, no logins, no training.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Select Practice Areas</h3>
+          <p>Choose from Accounting, Legal, or Financial Advisory. AstraWatch automatically monitors all relevant regulatory bodies.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Receive Alerts</h3>
+          <p>AstraWatch scrapes 50+ sources every 15 minutes, classifies changes by relevance and urgency, and delivers formatted Slack alerts with AI-generated impact summaries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section-header">
+        <h2>Everything You Need to Stay Compliant</h2>
+        <p>AI-powered monitoring that works while you focus on your clients.</p>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon">🔎</div>
+          <h3>50+ Regulatory Sources</h3>
+          <p>SEC, FTC, IRS, PCAOB, FASB, state bar associations, state CPA boards, and state insurance commissioners — all in one feed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI-Powered Classification</h3>
+          <p>LLM classifies each change by relevance (High/Medium/Low), practice area, urgency, and generates actionable 2-3 sentence impact summaries.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Sub-24-Hour Alerting</h3>
+          <p>Scraper polls sources every 15 minutes. Critical regulatory changes are detected and delivered within hours, not days.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Slack-Native Delivery</h3>
+          <p>Beautiful Block Kit formatted alerts with urgency emojis, impact summaries, action recommendations, and direct links to sources.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Multi-Practice Area</h3>
+          <p>Accounting firms, law firms, and financial advisory firms — configure exactly what matters to your practice in under 5 minutes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>No-Touch Setup</h3>
+          <p>Enterprise-class compliance monitoring with zero deployment friction. No IT team required. No training needed. Just connect and go.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regulatory Sources -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="section-header">
+        <h2>Sources We Monitor</h2>
+        <p>Federal and state regulatory bodies across accounting, legal, and financial advisory.</p>
+      </div>
+      <div class="sources-list">
+        <span class="source-tag active">SEC</span>
+        <span class="source-tag">FTC</span>
+        <span class="source-tag">IRS</span>
+        <span class="source-tag">PCAOB</span>
+        <span class="source-tag">FASB</span>
+        <span class="source-tag">State Bar Associations</span>
+        <span class="source-tag">State CPA Boards</span>
+        <span class="source-tag">State Insurance Comm.</span>
+        <span class="source-tag">FinCEN</span>
+        <span class="source-tag">CFPB</span>
+        <span class="source-tag">FINRA</span>
+        <span class="source-tag">More coming...</span>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section class="waitlist-section" id="waitlist">
+      <div class="waitlist-card">
+        <div class="form-content" id="formContent">
+          <h2>Join the Early Access Waitlist</h2>
+          <p>Be among the first firms to get AstraWatch. Early access participants get 30% off for the first year and help shape the product.</p>
+
+          <form name="astrawatch-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/api/waitlist">
+            <input type="hidden" name="form-name" value="astrawatch-waitlist" />
+            <p style="display:none"><label>Don't fill this out <input name="bot-field" /></label></p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@yourfirm.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company">Company / Firm Name</label>
+                <input type="text" id="company" name="company" placeholder="Smith & Associates CPA" required>
+              </div>
+              <div class="form-group">
+                <label for="practice_area">Practice Area</label>
+                <select id="practice_area" name="practice_area" required>
+                  <option value="">Select...</option>
+                  <option value="accounting">Accounting / Tax</option>
+                  <option value="legal">Legal / Law Firm</option>
+                  <option value="financial_advisory">Financial Advisory</option>
+                  <option value="multiple">Multiple Practice Areas</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firm_size">Firm Size</label>
+              <select id="firm_size" name="firm_size">
+                <option value="">Select...</option>
+                <option value="1-5">Solo (1-5)</option>
+                <option value="5-20">Small (5-20)</option>
+                <option value="20-50">Medium (20-50)</option>
+                <option value="50+">Large (50+)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-submit">Join Waitlist →</button>
+            <p class="form-note">No spam. We'll notify you when AstraWatch is ready for your firm. Estimated Q3 2026.</p>
+          </form>
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">🎉</div>
+          <div class="success-title">You're on the list!</div>
+          <p class="success-text">Thanks for joining the AstraWatch early access waitlist. We'll be in touch at the email you provided when your spot is ready. Expect updates on our progress in the coming weeks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 <a href="https://astraintelligence.co">Astra Intelligence Corporation</a>. All rights reserved.</p>
+      <p style="margin-top: 0.5rem;"><a href="mailto:founders@astraintelligence.co">founders@astraintelligence.co</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Handle waitlist form submission — server API first, Netlify fallback
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        document.getElementById('formContent').classList.add('hide');
+        document.getElementById('formSuccess').classList.add('show');
+      }
+
+      const form = document.querySelector('form');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        delete data['form-name'];
+        delete data['bot-field'];
+
+        // Try server API first
+        fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+        .then(response => {
+          if (response.ok) {
+            document.getElementById('formContent').classList.add('hide');
+            document.getElementById('formSuccess').classList.add('show');
+          } else {
+            // Fallback: Netlify form submission
+            const urlData = new URLSearchParams(formData);
+            fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: urlData.toString()
+            })
+            .then(r => {
+              if (r.ok) {
+                document.getElementById('formContent').classList.add('hide');
+                document.getElementById('formSuccess').classList.add('show');
+              } else {
+                form.submit();
+              }
+            })
+            .catch(() => form.submit());
+          }
+        })
+        .catch(() => {
+          // Fallback: Netlify form submission
+          const urlData = new URLSearchParams(formData);
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: urlData.toString()
+          })
+          .then(r => {
+            if (r.ok) {
+              document.getElementById('formContent').classList.add('hide');
+              document.getElementById('formSuccess').classList.add('show');
+            } else {
+              form.submit();
+            }
+          })
+          .catch(() => form.submit());
+        });
+      });
+    });
+  </script>
+</body>
+</html>
