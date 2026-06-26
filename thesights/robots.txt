@@ -1,0 +1,6 @@
+# Allow all well-behaved crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://thesights.astraintelligence.co/sitemap.xml
