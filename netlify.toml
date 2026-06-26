@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/thesights/*"
+  to = "/thesights/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/holdquarter/*"
+  to = "/holdquarter/:splat"
+  status = 200

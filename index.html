@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Astra Intelligence Labs — An AI-native venture studio building autonomous businesses. Portfolio includes AstraMedia, The Sights, HoldQuarter, and AstraWatch." />
+  <title>Astra Intelligence Labs | AI-Native Venture Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand: #6d5dfc;
+      --brand-dark: #5145cd;
+      --brand-glow: rgba(109, 93, 252, 0.15);
+      --ink: #0f172a;
+      --ink-soft: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --surface: #f8fafc;
+      --white: #ffffff;
+      --bg: #f8fafc;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    nav .logo span { color: var(--brand); }
+    nav .logo small {
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--muted);
+      margin-left: 4px;
+    }
+    nav .links { display: flex; gap: 32px; align-items: center; }
+    nav .links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav .links a:hover { color: var(--ink); }
+
+    .hero {
+      padding: 160px 24px 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--brand-glow);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+    .hero h1 span { color: var(--brand); }
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--ink-soft);
+      max-width: 680px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .hero .cta:hover { background: var(--brand-dark); transform: translateY(-1px); }
+
+    section { padding: 80px 24px; }
+    section .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    section .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .portfolio-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      transition: all 0.2s;
+    }
+    .portfolio-card:hover {
+      border-color: var(--brand);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .portfolio-card .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .portfolio-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .portfolio-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .portfolio-card .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 32px;
+    }
+    .step { counter-increment: step; }
+    .step .num {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--brand-glow);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .step h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .step p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 24px;
+    }
+    footer .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer p { font-size: 14px; color: var(--muted); }
+    footer .links { display: flex; gap: 24px; }
+    footer .links a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    footer .links a:hover { color: var(--ink); }
+
+    @media (max-width: 640px) {
+      nav .links { display: none; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="/" class="logo">
+      Astra<span>Labs</span> <small>— Venture Studio</small>
+    </a>
+    <div class="links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#how">How It Works</a>
+      <a href="https://astramedia.app" target="_blank">AstraMedia</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="badge">AI-Native Venture Studio</div>
+  <h1>We build <span>autonomous</span><br/>AI businesses.</h1>
+  <p>
+    Astra Intelligence Labs is a venture studio that builds, operates, and scales
+    AI-native businesses. Each company in our portfolio runs autonomously — from
+    marketing and sales to product and operations — powered by our Paperclip operating
+    system.
+  </p>
+  <a class="cta" href="#portfolio">Explore Portfolio &rarr;</a>
+</header>
+
+<section id="portfolio">
+  <div class="inner">
+    <h2>Portfolio</h2>
+    <p class="subtitle">Autonomous businesses built on the Paperclip operating system.</p>
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card">
+        <div class="icon" style="background: #eef2ff; color: #4f46e5;">📡</div>
+        <h3>AstraMedia</h3>
+        <p>AI-powered media visibility platform. Helps founders and businesses turn expertise into journalist-ready pitches, find relevant press contacts, and launch smarter outreach.</p>
+        <span class="tag" style="background: #eef2ff; color: #4f46e5;">● Live — Revenue Phase</span>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="icon" style="background: #fef3c7; color: #d97706;">🎨</div>
+        <h3>The Sights</h3>
+        <p>AI art studio and cryptid/paranormal sticker store. Generate clip art and stickers via AI prompts. Shop physical prints on Redbubble and digital downloads on Gumroad.</p>
+        <span class="tag" style="background: #fef3c7; color: #d97706;">● Live — Shipping</span>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="icon" style="background: #d1fae5; color: #059669;">🏦</div>
+        <h3>HoldQuarter</h3>
+        <p>Automatic income tax withholding for freelancers and contractors. Every payment escrows the right amount for quarterly taxes — no more surprise bills.</p>
+        <span class="tag" style="background: #d1fae5; color: #059669;">● Pre-Launch</span>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="icon" style="background: #fce7f3; color: #db2777;">👁️</div>
+        <h3>AstraWatch</h3>
+        <p>AI-powered media monitoring and competitive intelligence. Track brand mentions, competitor press, and industry trends — all automated.</p>
+        <span class="tag" style="background: #fce7f3; color: #db2777;">● Incubating</span>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="icon" style="background: #e0e7ff; color: #4338ca;">⚙️</div>
+        <h3>Paperclip</h3>
+        <p>The internal operating system that powers our entire portfolio. Multi-agent orchestration, autonomous execution, and compound intelligence across all businesses.</p>
+        <span class="tag" style="background: #dbeafe; color: #2563eb;">● Infrastructure</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background: var(--white);">
+  <div class="inner">
+    <h2>How We Build</h2>
+    <p class="subtitle">A repeatable system for launching autonomous businesses.</p>
+    <div class="steps" style="counter-reset: step;">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Identify Market Gaps</h3>
+        <p>We find real problems where AI can deliver 10x improvement over existing solutions — no AI-washing, just genuine automation.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Validate with Experiments</h3>
+        <p>Each venture runs lean, falsifiable experiments (<2 weeks, under $100). Pass/fail data drives all decisions. No vanity metrics.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Ship Autonomous Operations</h3>
+        <p>AI agents handle marketing, sales, support, and operations from day one. Humans focus on strategy, capital, and high-leverage decisions.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Scale or Kill</h3>
+        <p>Every business targets $10K MRR within 6 months or gets re-evaluated. Capital-efficient, data-driven, and ruthlessly focused on revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <p>&copy; 2026 Astra Intelligence Labs, Inc.</p>
+    <div class="links">
+      <a href="https://astramedia.app">AstraMedia</a>
+      <a href="mailto:hello@astraintelligence.co">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

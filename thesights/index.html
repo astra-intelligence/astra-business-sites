@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sights — Cryptids, Dragons & the Paranormal</title>
+  <meta name="description" content="Weird, wonderful sticker art by a 9-year-old creator. Cryptids, dragons, and creatures that go bump in the night.">
+  <meta property="og:title" content="The Sights — Cryptid & Paranormal Stickers">
+  <meta property="og:description" content="Stickers for the curious and weird. Made by a 9-year-old entrepreneur.">
+  <meta property="og:image" content="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/generated-images/company_194260/af8935e0-ceed-4932-9d4d-28d5229ed7c4.jpg">
+  <meta name="theme-color" content="#0d0018">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Space Grotesk', sans-serif; background: #0d0018; color: #e8dff5; line-height: 1.6; overflow-x: hidden; }
+    .bg-ambient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 20% 50%, rgba(120,60,200,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(200,0,100,0.06) 0%, transparent 50%); pointer-events: none; z-index: 0; }
+    .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .logo { font-family: 'Uncial Antiqua', serif; font-size: 1.4rem; color: #c084fc; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: #a78bfa; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #c084fc; }
+    .hero { padding: 5rem 0 4rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.2); color: #c084fc; font-size: 0.8rem; font-weight: 500; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
+    .hero h1 { font-family: 'Uncial Antiqua', serif; font-size: 4rem; background: linear-gradient(135deg, #c084fc, #e879f9, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.1; }
+    .hero p { font-size: 1.2rem; color: #a78bfa; max-width: 600px; margin: 0 auto 2rem; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #c084fc, #a855f7); color: #fff; padding: 0.85rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.2s; box-shadow: 0 4px 20px rgba(168,85,247,0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(168,85,247,0.4); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #e8dff5; padding: 0.85rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: all 0.2s; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .hero-note { margin-top: 1rem; font-size: 0.85rem; color: #6b5b8a; }
+    .section { padding: 4rem 0; }
+    .section-title { text-align: center; font-size: 2rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .section-sub { text-align: center; color: #a78bfa; font-size: 1rem; margin-bottom: 3rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.2s; }
+    .card:hover { background: rgba(255,255,255,0.06); border-color: rgba(192,132,252,0.2); transform: translateY(-2px); }
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card h3 { color: #e8dff5; font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .card p { color: #8b7aaa; font-size: 0.9rem; }
+    .card-link { display: inline-block; margin-top: 1rem; color: #c084fc; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.06); color: #6b5b8a; font-size: 0.85rem; }
+    .shop-banner { background: linear-gradient(135deg, rgba(192,132,252,0.05), rgba(168,85,247,0.1)); border: 1px solid rgba(192,132,252,0.15); border-radius: 16px; padding: 2.5rem; text-align: center; margin: 2rem 0; }
+    .shop-banner h3 { color: #e8dff5; font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .shop-banner p { color: #a78bfa; margin-bottom: 1.5rem; }
+    @media (max-width: 640px) { 
+      .hero h1 { font-size: 2.5rem; }
+      .nav-links { gap: 1rem; }
+      .hero { padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-ambient"></div>
+
+  <nav>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1100px;margin:0 auto;padding:1.5rem;">
+      <a href="/" class="logo">The Sights</a>
+      <div class="nav-links">
+        <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank">Redbubble</a>
+        <a href="https://grantshatz.gumroad.com" target="_blank">Gumroad</a>
+        <a href="https://thesights.polsia.app" target="_blank">App</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-badge">👁️ Stickers by a 9-year-old</div>
+      <h1>The Sights</h1>
+      <p>Cryptids, dragons &amp; the paranormal — stickers for the curious and weird.</p>
+      <div class="hero-btns">
+        <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="btn-primary">
+          Shop on Redbubble →
+        </a>
+        <a href="https://grantshatz.gumroad.com" target="_blank" class="btn-secondary">
+          Digital on Gumroad →
+        </a>
+      </div>
+      <p class="hero-note">Physical stickers shipped worldwide ✦ Digital files delivered instantly</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Categories</h2>
+      <p class="section-sub">Something for every weirdo</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">👾</div>
+          <h3>Cryptids</h3>
+          <p>Mothman, Nessie, and friends that refuse to be photographed clearly.</p>
+          <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="card-link">Browse Cryptids →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🐉</div>
+          <h3>Dragons</h3>
+          <p>Fire-breathing, hoard-sitting, villager-terrifying reptilian wonders.</p>
+          <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="card-link">Browse Dragons →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">👻</div>
+          <h3>Paranormal</h3>
+          <p>Ghosts, aliens, and things that go bump in the night.</p>
+          <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="card-link">Browse Paranormal →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧬</div>
+          <h3>Mythology</h3>
+          <p>Ancient beasts from every culture that ever had a campfire.</p>
+          <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="card-link">Browse Mythology →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>Robots & Sci-Fi</h3>
+          <p>Gears, lasers, and questionable artificial intelligence.</p>
+          <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="card-link">Browse Robots →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔬</div>
+          <h3>Science</h3>
+          <p>Lab coats, test tubes, and the periodic table of things that explode.</p>
+          <a href="https://www.redbubble.com/people/thesights1/shop" target="_blank" class="card-link">Browse Science →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="shop-banner">
+      <h3>✨ New: Digital Sticker Packs</h3>
+      <p>Download PNG files for use anywhere — messaging apps, social media, digital scrapbooking.</p>
+      <a href="https://grantshatz.gumroad.com" target="_blank" class="btn-primary">
+        Browse Digital Packs →
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 The Sights — A venture of Astra Intelligence Labs</p>
+      <p style="margin-top:0.5rem;font-size:0.8rem;">astraintelligence.co</p>
+    </div>
+  </footer>
+</body>
+</html>

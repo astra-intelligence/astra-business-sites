@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HoldQuarter — Automated Quarterly Tax Withholding</title>
+  <meta name="description" content="HoldQuarter automatically withholds income tax from every payment you receive and pays the IRS quarterly. Funds sit in an interest-bearing account — the interest is paid to you.">
+  <meta property="og:title" content="HoldQuarter — Automated Tax Withholding">
+  <meta property="og:description" content="Automatic quarterly tax withholding for freelancers and independent contractors. We hold tax from every payment and remit to the IRS on your schedule.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #020617; color: #e2e8f0; line-height: 1.6; }
+    .bg-pattern { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(99,102,241,0.06) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; z-index: 0; }
+    .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #e2e8f0; text-decoration: none; }
+    .logo span { color: #818cf8; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #e2e8f0; }
+    .nav-cta { background: #818cf8; color: #fff !important; padding: 0.5rem 1.25rem; border-radius: 8px; }
+    .nav-cta:hover { background: #6366f1 !important; }
+    .hero { padding: 6rem 0 4rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.2); color: #818cf8; font-size: 0.8rem; font-weight: 600; padding: 0.35rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.3px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; background: linear-gradient(135deg, #e2e8f0, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.15; }
+    .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 600px; margin: 0 auto 2rem; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #818cf8; color: #fff; padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.2s; box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
+    .btn-primary:hover { background: #6366f1; transform: translateY(-2px); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #e2e8f0; padding: 0.85rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: all 0.2s; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
+    .section { padding: 4rem 0; }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .section-header p { color: #94a3b8; font-size: 1.05rem; max-width: 500px; margin: 0 auto; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .feature-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; transition: all 0.2s; }
+    .feature-card:hover { border-color: rgba(129,140,248,0.2); background: rgba(129,140,248,0.02); }
+    .feature-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(129,140,248,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
+    .feature-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .feature-card p { color: #94a3b8; font-size: 0.9rem; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; counter-reset: step; margin: 2rem 0; }
+    .step { text-align: center; }
+    .step-num { width: 48px; height: 48px; border-radius: 50%; background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: 700; color: #818cf8; font-size: 1.2rem; }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .step p { color: #94a3b8; font-size: 0.85rem; }
+    .cta-section { text-align: center; padding: 5rem 0; }
+    .cta-section h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .cta-section p { color: #94a3b8; margin-bottom: 2rem; }
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.06); color: #475569; font-size: 0.85rem; }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.25rem; }
+      .hero { padding: 3rem 0; }
+      .section-header h2 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+
+  <nav>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1100px;margin:0 auto;padding:1.5rem;">
+      <a href="/" class="logo">Hold<span>Quarter</span></a>
+      <div class="nav-links">
+        <a href="https://holdquarter.polsia.app">Dashboard</a>
+        <a href="https://holdquarter.polsia.app/legal">Legal</a>
+        <a href="https://holdquarter.polsia.app" class="nav-cta">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-badge">🏛️ Automated Tax Withholding</div>
+      <h1>Tax withholding that<br>actually works for freelancers</h1>
+      <p>HoldQuarter automatically withholds income tax from every payment you receive and pays the IRS quarterly. Your money sits in an interest-bearing account — the interest is paid to you.</p>
+      <div class="hero-btns">
+        <a href="https://holdquarter.polsia.app" class="btn-primary">
+          Get Started →
+        </a>
+        <a href="https://holdquarter.polsia.app/demo" class="btn-secondary">
+          See How It Works
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>How it works</h2>
+        <p>Set it up once. Never worry about estimated taxes again.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Connect</h3>
+          <p>Link your Stripe account or payment processor. We detect incoming payments automatically.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Set Your Rate</h3>
+          <p>Choose your withholding percentage (we recommend 25-30% for most freelancers).</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Automatic Escrow</h3>
+          <p>Each payment gets split — the tax portion goes into your HoldQuarter interest-bearing account.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Quarterly Remittance</h3>
+          <p>We file and pay the IRS each quarter. You keep the interest earned on your own tax money.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Why freelancers use HoldQuarter</h2>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>You keep the interest</h3>
+          <p>Your tax money sits in an FDIC-insured, interest-bearing account. The interest accrues to you, not us.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>No more quarterly panic</h3>
+          <p>Forget the scramble to calculate estimated taxes four times a year. It happens automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Audit-proof records</h3>
+          <p>Every withholding transaction is logged with full audit trail. Your CPA will thank you.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Works with Stripe</h3>
+          <p>Connect directly to Stripe. We detect payments, calculate withholding, and escrow the right amount.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏦</div>
+          <h3>IRS filing included</h3>
+          <p>We handle Form 1040-ES filing each quarter. E-filed directly to the IRS on your behalf.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Real-time dashboard</h3>
+          <p>See your balance, withholding history, and upcoming quarterly payments at a glance.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="cta-section" style="background: linear-gradient(180deg, transparent, rgba(129,140,248,0.03));">
+    <div class="container">
+      <h2>Ready to stop guessing<br>about quarterly taxes?</h2>
+      <p>Set up in 5 minutes. Free to start — only pay when your first escrow completes.</p>
+      <a href="https://holdquarter.polsia.app" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem;">
+        Start Free →
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 HoldQuarter — A venture of Astra Intelligence Labs</p>
+      <p style="margin-top:0.5rem;font-size:0.8rem;">astraintelligence.co</p>
+    </div>
+  </footer>
+</body>
+</html>
