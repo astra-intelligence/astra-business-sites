@@ -258,12 +258,12 @@ Once GA4 is set up (AST-623), configure these conversion events:
 ## 9. Deployment Checklist
 
 - [ ] **AST-623 (Blocked):** GA4 + Search Console setup for each site
-- [ ] **Redeploy** thesights site with schema + sitemap + robots.txt
-- [ ] **Redeploy** holdquarter site with schema + sitemap + robots.txt
-- [ ] **Redeploy** main corp site with schema + sitemap + robots.txt + OG tags
-- [ ] **Add Organization schema** to all 3 sites
-- [ ] **Add canonical URLs** to all 3 sites
-- [ ] **Add Twitter Card tags** to all 3 sites
+- [x] **✅ Redeploy** thesights site with schema + sitemap + robots.txt — Done 2026-06-26
+- [x] **✅ Redeploy** holdquarter site with schema + sitemap + robots.txt — Done 2026-06-26
+- [x] **✅ Redeploy** main corp site with schema + sitemap + robots.txt + OG tags — Done 2026-06-26
+- [x] **✅ Add Organization schema** to all 3 sites — Done 2026-06-26
+- [x] **✅ Add canonical URLs** to all 3 sites — Done 2026-06-26
+- [x] **✅ Add Twitter Card tags** to all 3 sites — Done 2026-06-26
 - [ ] **Configure GA4 conversion events** (after GA4 live)
 - [ ] **Launch SEM campaigns** (after keywords finalized)
 - [ ] **Expand content depth** (target 1500+ words per homepage)
