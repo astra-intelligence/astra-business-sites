@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://astrawatch.astraintelligence.co/sitemap.xml
