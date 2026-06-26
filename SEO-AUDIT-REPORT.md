@@ -288,3 +288,99 @@ Once GA4 is set up (AST-623), configure these conversion events:
 8. **No Twitter Card tags** — poor previews on X/Twitter shares
 9. **Thin content** — all sites under 1000 words on homepage
 10. **No internal linking between ventures** — main corp site doesn't link to HoldQuarter or The Sights
+## 3. Keyword Research — 10-15 per Site
+
+### The Sights (Cryptids, Dragons & Paranormal Stickers)
+
+| Keyword | Intent | Est. Monthly Volume | Notes |
+|---------|--------|-------------------|-------|
+| cryptid sticker sheet | Commercial | 1K-3K | High purchase intent |
+| Bigfoot stickers | Commercial | 5K-10K | Evergreen, seasonal spikes |
+| Mothman art print | Commercial | 1K-3K | Niche, loyal audience |
+| paranormal stickers | Commercial | 3K-5K | Broad, good top-of-funnel |
+| dragon sticker art | Commercial | 5K-10K | Competitive but high volume |
+| unique kids gifts | Informational | 10K-50K | Broad, use as category page |
+| sticker sheet for kids | Commercial | 3K-5K | Parent target |
+| cryptozoology gift | Commercial | 1K-3K | High intent |
+| 9-year-old artist | Informational | 500-1K | Story angle, PR value |
+| weird stickers online | Commercial | 1K-3K | Niche discovery |
+| creature sticker pack | Commercial | 5K-10K | Solid B2C volume |
+| Loch Ness sticker | Commercial | 500-1K | Iconic cryptid |
+| paranormal collector gift | Commercial | 500-1K | Small but high-value |
+| mythical creature art | Informational | 10K-20K | Brand awareness |
+| handmade sticker shop | Commercial | 1K-3K | Etsy competition |
+
+### HoldQuarter (Freelance Tax Withholding)
+
+| Keyword | Intent | Est. Monthly Volume | Competition |
+|---------|--------|-------------------|-------------|
+| quarterly tax filing freelancer | Commercial | 3K-5K | Medium |
+| self employment tax calculator | Informational | 10K-20K | High |
+| automatic tax withholding | Commercial | 1K-3K | Low |
+| 1099 tax withholding software | Commercial | 500-1K | Low |
+| freelancer tax software | Commercial | 5K-10K | High |
+| independent contractor taxes | Informational | 10K-20K | High |
+| quarterly estimated tax payment | Informational | 5K-10K | Medium |
+| gig worker tax withholding | Commercial | 1K-3K | Low |
+| irs quarterly payment automation | Commercial | 500-1K | Very Low |
+| how to pay quarterly taxes | Informational | 10K-20K | High |
+| tax withholding for freelancers | Commercial | 3K-5K | Medium |
+| save for tax season | Informational | 5K-10K | Medium |
+| stripe tax withholding | Commercial | 1K-3K | Low (Stripe Tax) |
+| interest on tax savings | Informational | 500-1K | Very Low |
+| freelance financial planning | Informational | 3K-5K | Medium |
+
+### Astra Intelligence Corp (AI Research Lab)
+
+| Keyword | Intent | Est. Monthly Volume | Notes |
+|---------|--------|-------------------|-------|
+| AI research lab | Informational | 5K-10K | Brand awareness |
+| ethical AI company | Informational | 3K-5K | Differentiation |
+| applied AI systems | Commercial | 1K-3K | B2B audience |
+| AI for media | Commercial | 1K-3K | Niche |
+| autonomous AI agents | Informational | 5K-15K | Growing |
+| truth-seeking AI | Informational | 500-1K | Unique positioning |
+| human-aligned AI | Informational | 1K-3K | Academic audience |
+| AI venture studio | Commercial | 500-1K | Niche |
+| machine learning research | Informational | 10K-20K | Very competitive |
+| AI product development | Commercial | 3K-5K | B2B |
+
+---
+
+## 8. Competitive Landscape
+
+### HoldQuarter Competitors
+
+| Competitor | URL | Model | Key Differentiator | Est. Traffic |
+|-----------|-----|-------|-------------------|-------------|
+| **Keeper Tax** | keepertax.com | $199/yr subscription | Automatic 1099 deduction finder | ~500K/mo |
+| **FlyFin** | flyfin.ai | $199/yr AI-powered | AI-based deduction categorization | ~200K/mo |
+| **QuickBooks Self-Employed** | quickbooks.intuit.com/self-employed | $15/mo + $7.50/mo | Big brand, integrations with TurboTax | ~5M/mo |
+| **Stride Tax** | strideinsurance.com/tax | Free deduction tracking + paid filing | Insurance + tax bundle | ~300K/mo |
+
+**HoldQuarter Differentiation:** Automatic withholding + interest-bearing account. No competitor offers automated IRS remittance from payment inflow. Keeper and FlyFin focus on deductions, QBSE focuses on tracking — HoldQuarter owns the *withholding at source* niche.
+
+### The Sights Competitors
+
+| Competitor | URL | Pricing | Differentiator |
+|-----------|-----|--------|---------------|
+| **Etsy** (cryptid stickers category) | etsy.com | $3-8/sheet | Giant marketplace, huge traffic |
+| **Redbubble** (paranormal art) | redbubble.com | $10-20/print | Print-on-demand, artist uploads |
+| **Stickermule** (custom) | stickermule.com | $25+/sheet | Professional/bulk, not art-focused |
+| **DeviousPlan** (small shops) | various | $5-15/sheet | Small batch artists |
+
+**The Sights Differentiation:** Original art by a 9-year-old creator. Story-driven brand. Cryptids + dragons + paranormal all in one shop. Parent-child creator story is PR gold.
+
+### Astra Intelligence Corp Competitors
+
+| Competitor | URL | Focus |
+|-----------|-----|-------|
+| **Anthropic** | anthropic.com | AI safety research, Claude |
+| **OpenAI** | openai.com | General AI, GPT models |
+| **Adept** | adept.ai | AI agents for enterprise |
+| **Cognition Labs** | cognition.ai | AI coding agents (Devin) |
+
+**Differentiation:** Venture studio model + applied AI products + research. Most AI labs do one or the other, not both.
+
+---
+*Report generated 2026-06-26 by SEO/SEM Manager (AST-624)*
