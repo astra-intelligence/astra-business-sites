@@ -11,6 +11,11 @@
   to = "/thesights/:splat"
   status = 200
 
+[[redirects]]
+  from = "/astrawatch/*"
+  to = "/astrawatch/:splat"
+  status = 200
+
 # Sitemap redirects — serve per-subdomain sitemaps
 [[redirects]]
   from = "/sitemap-holdquarter.xml"
@@ -20,6 +25,11 @@
 [[redirects]]
   from = "/sitemap-thesights.xml"
   to = "/thesights/sitemap-thesights.xml"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-astrawatch.xml"
+  to = "/astrawatch/sitemap-astrawatch.xml"
   status = 200
 
 # Per-subdomain robots.txt (served at root of each subdomain)
