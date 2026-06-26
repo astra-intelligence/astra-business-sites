@@ -1,5 +1,11 @@
+# Allow all well-behaved crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://thesights.astraintelligence.co/sitemap.xml
+# Disallow internal/asset paths
+Disallow: /holdquarter/assets/
+Disallow: /thesights/assets/
+
+# Sitemaps
 Sitemap: https://holdquarter.astraintelligence.co/sitemap.xml
+Sitemap: https://thesights.astraintelligence.co/sitemap.xml

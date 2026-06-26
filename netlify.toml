@@ -2,11 +2,28 @@
   publish = "."
 
 [[redirects]]
+  from = "/holdquarter/*"
+  to = "/holdquarter/:splat"
+  status = 200
+
+[[redirects]]
   from = "/thesights/*"
   to = "/thesights/:splat"
   status = 200
 
+# Sitemap redirects — serve per-subdomain sitemaps
 [[redirects]]
-  from = "/holdquarter/*"
-  to = "/holdquarter/:splat"
+  from = "/sitemap-holdquarter.xml"
+  to = "/holdquarter/sitemap-holdquarter.xml"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-thesights.xml"
+  to = "/thesights/sitemap-thesights.xml"
+  status = 200
+
+# Per-subdomain robots.txt (served at root of each subdomain)
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
   status = 200
