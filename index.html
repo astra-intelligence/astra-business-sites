@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Astra Intelligence Labs — An AI-native venture studio building autonomous businesses. Portfolio includes AstraMedia, The Sights, HoldQuarter, and AstraWatch." />
-  <title>Astra Intelligence Labs | AI-Native Venture Studio</title>
+  <meta name="description" content="Astra Intelligence Corporation — AI research lab building ethical, human-aligned systems that solve real problems in media, mental health, and everyday life." />
+  <title>Astra Intelligence Corporation | AI Research &amp; Applied Intelligence</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -141,6 +141,36 @@
       margin-bottom: 48px;
     }
 
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .research-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      transition: all 0.2s;
+    }
+    .research-card:hover {
+      border-color: var(--brand);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .research-card .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .research-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .research-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -179,22 +209,6 @@
       margin-top: 12px;
     }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 32px;
-    }
-    .step { counter-increment: step; }
-    .step .num {
-      font-size: 48px;
-      font-weight: 800;
-      color: var(--brand-glow);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .step h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-    .step p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-
     footer {
       border-top: 1px solid var(--border);
       padding: 48px 24px;
@@ -216,7 +230,7 @@
     @media (max-width: 640px) {
       nav .links { display: none; }
       .portfolio-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; }
+      .research-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -225,32 +239,60 @@
 <nav>
   <div class="inner">
     <a href="/" class="logo">
-      Astra<span>Labs</span> <small>— Venture Studio</small>
+      Astra<span>Intelligence</span> <small>— Research Corp</small>
     </a>
     <div class="links">
+      <a href="#research">Research</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#how">How It Works</a>
       <a href="https://astramedia.app" target="_blank">AstraMedia</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="badge">AI-Native Venture Studio</div>
-  <h1>We build <span>autonomous</span><br/>AI businesses.</h1>
+  <div class="badge">AI Research &amp; Applied Intelligence</div>
+  <h1>Building <span>truth-seeking</span><br/>intelligence systems.</h1>
   <p>
-    Astra Intelligence Labs is a venture studio that builds, operates, and scales
-    AI-native businesses. Each company in our portfolio runs autonomously — from
-    marketing and sales to product and operations — powered by our Paperclip operating
-    system.
+    Astra Intelligence Corporation is an AI research lab developing ethical, human-aligned systems
+    that solve real problems — from media visibility and mental health to the everyday challenges
+    people face. Our work blends neuroscience-informed design with responsible innovation to create
+    technology that enhances human creativity, connection, and impact.
   </p>
-  <a class="cta" href="#portfolio">Explore Portfolio &rarr;</a>
+  <a class="cta" href="#research">Our Research &rarr;</a>
 </header>
 
-<section id="portfolio">
+<section id="research">
+  <div class="inner">
+    <h2>Research Focus</h2>
+    <p class="subtitle">Developing transparent, bias-reduced AI architectures that work in the real world.</p>
+    <div class="research-grid">
+
+      <div class="research-card">
+        <div class="icon" style="background: #eef2ff; color: #4f46e5;">🎯</div>
+        <h3>Truth-Seeking Architectures</h3>
+        <p>Training modalities that emphasize transparency, factual grounding, and bias reduction — moving beyond pattern matching toward systems that actively seek and surface accurate information.</p>
+      </div>
+
+      <div class="research-card">
+        <div class="icon" style="background: #d1fae5; color: #059669;">🧠</div>
+        <h3>Neuroscience-Informed AI</h3>
+        <p>Blending cognitive science with machine learning to build systems that understand context, nuance, and human communication patterns — not just process tokens.</p>
+      </div>
+
+      <div class="research-card">
+        <div class="icon" style="background: #fef3c7; color: #d97706;">🌍</div>
+        <h3>Real-World Applicability</h3>
+        <p>Research that extends beyond the lab into media relations, mental health support, personalized outreach, and daily decision-making — measured by impact, not benchmarks.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" style="background: var(--white);">
   <div class="inner">
     <h2>Portfolio</h2>
-    <p class="subtitle">Autonomous businesses built on the Paperclip operating system.</p>
+    <p class="subtitle">Applied research meets real products — built by Astra Intelligence.</p>
     <div class="portfolio-grid">
 
       <div class="portfolio-card">
@@ -281,49 +323,13 @@
         <span class="tag" style="background: #fce7f3; color: #db2777;">● Incubating</span>
       </div>
 
-      <div class="portfolio-card">
-        <div class="icon" style="background: #e0e7ff; color: #4338ca;">⚙️</div>
-        <h3>Paperclip</h3>
-        <p>The internal operating system that powers our entire portfolio. Multi-agent orchestration, autonomous execution, and compound intelligence across all businesses.</p>
-        <span class="tag" style="background: #dbeafe; color: #2563eb;">● Infrastructure</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="how" style="background: var(--white);">
-  <div class="inner">
-    <h2>How We Build</h2>
-    <p class="subtitle">A repeatable system for launching autonomous businesses.</p>
-    <div class="steps" style="counter-reset: step;">
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Identify Market Gaps</h3>
-        <p>We find real problems where AI can deliver 10x improvement over existing solutions — no AI-washing, just genuine automation.</p>
-      </div>
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Validate with Experiments</h3>
-        <p>Each venture runs lean, falsifiable experiments (<2 weeks, under $100). Pass/fail data drives all decisions. No vanity metrics.</p>
-      </div>
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Ship Autonomous Operations</h3>
-        <p>AI agents handle marketing, sales, support, and operations from day one. Humans focus on strategy, capital, and high-leverage decisions.</p>
-      </div>
-      <div class="step">
-        <div class="num">04</div>
-        <h3>Scale or Kill</h3>
-        <p>Every business targets $10K MRR within 6 months or gets re-evaluated. Capital-efficient, data-driven, and ruthlessly focused on revenue.</p>
-      </div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="inner">
-    <p>&copy; 2026 Astra Intelligence Labs, Inc.</p>
+    <p>&copy; 2026 Astra Intelligence Corporation. All rights reserved.</p>
     <div class="links">
       <a href="https://astramedia.app">AstraMedia</a>
       <a href="mailto:hello@astraintelligence.co">Contact</a>
