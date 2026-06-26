@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thesights.astraintelligence.co/sitemap.xml
+Sitemap: https://holdquarter.astraintelligence.co/sitemap.xml
