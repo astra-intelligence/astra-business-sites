@@ -1,0 +1,11 @@
+# AstraWatch
+/astrawatch/*  /astrawatch/:splat  200
+
+# HoldQuarter
+/holdquarter/*  /holdquarter/:splat  200
+
+# TheSights
+/thesights/*  /thesights/:splat  200
+
+# Sitemap redirects
+/sitemap-astrawatch.xml  /astrawatch/sitemap-astrawatch.xml  200
