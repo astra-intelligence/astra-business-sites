@@ -27,6 +27,11 @@ SITES = {
         'domain': 'holdquarter.astraintelligence.co',
         'name': 'HoldQuarter',
     },
+    'astrawatch': {
+        'path': os.path.join(BASE_DIR, 'astrawatch', 'index.html'),
+        'domain': 'astrawatch.astraintelligence.co',
+        'name': 'AstraWatch',
+    },
 }
 
 GA4_SNIPPET = """  <!-- Google Analytics (GA4) -->
@@ -84,8 +89,14 @@ def main():
                 content = f.read()
             has_ga4 = 'gtag/js?id=' in content
             has_verification = 'google-site-verification' in content
-            print(f"\n{site['name']} ({site['domain']}):")
-            print(f"  GA4: {'✅' if has_ga4 else '❌'} {'(ID: ' + re.search(r'gtag/js\?id=([A-Z0-9-]+)', content).group(1) + ')' if has_ga4 else '(not configured)'}")
+            sep_line = "\n" + site['name'] + " (" + site['domain'] + "):"
+            print(sep_line)
+            if has_ga4:
+                match = re.search(r'gtag/js\?id=([A-Z0-9-]+)', content)
+                gaid = match.group(1) if match else 'unknown'
+                print(f"  GA4: ✅ (ID: {gaid})")
+            else:
+                print("  GA4: ❌ (not configured)")
             print(f"  Site Verification: {'✅' if has_verification else '❌'}")
         return
 
